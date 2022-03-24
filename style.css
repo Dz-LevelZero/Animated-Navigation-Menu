@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to right, #4A00E0, #8E2DE2);
+}
+
+.navigation {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 80px;
+    min-height: 200px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 30px -5px rgba(0, 0, 0, 0.6);
+    transition: 0.5s;
+}
+
+.navigation.active {
+    width: 400px;
+}
+
+.navigation .menu_toggle {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 80px;
+    height: 70px;
+    cursor: pointer;
+    padding: 0 20px;
+    width: 100%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.navigation .menu_toggle::before {
+    content: "";
+    position: absolute;
+    width: 35px;
+    height: 2px;
+    background: #6415FF;
+    transform: translateY(-10px);
+    transition: 0.5s;
+}
+
+.navigation .menu_toggle::after {
+    content: "";
+    position: absolute;
+    width: 35px;
+    height: 2px;
+    background: #6415FF;
+    transform: translateY(10px);
+    transition: 0.5s;
+    box-shadow: 0 -10px #6415FF;
+}
+
+.navigation.active .menu_toggle::before {
+    transform: translateY(0px) rotate(45deg);
+}
+
+.navigation.active .menu_toggle::after {
+    transform: translateY(0px) rotate(-45deg);
+    box-shadow: 0 0 #6415FF;
+}
