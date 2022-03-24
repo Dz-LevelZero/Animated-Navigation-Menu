@@ -20,7 +20,6 @@ body {
     flex-direction: column;
     align-items: flex-end;
     width: 80px;
-    min-height: 200px;
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 5px 30px -5px rgba(0, 0, 0, 0.6);
@@ -71,4 +70,37 @@ body {
 .navigation.active .menu_toggle::after {
     transform: translateY(0px) rotate(-45deg);
     box-shadow: 0 0 #6415FF;
+}
+
+.navigation .profile {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    padding: 0 10px;
+    width: 100%;
+}
+
+.navigation .profile .img {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    overflow: hidden;
+    transition: 0.5s;
+    border-radius: 50%;
+}
+
+.navigation.active .profile .img {
+    width: 200px;
+    height: 200px;
+}
+
+.navigation .profile .img img {
+    position: absolute;
+    top : 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
